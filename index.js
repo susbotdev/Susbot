@@ -1,15 +1,5 @@
 const Discord = require("discord.js")
 const client = new Discord.Client({disableMentions: "everyone"});
-const express = require('express')
-const app = express();
-const port = 3000;
-const easteregg = ["the cake is a lie", "holy shizz u found a photo of old susbot! now hide it u idot", "achievement made! - how did we get here?", "what??????? u just u u u u u u  u just just u u just just found my source code"]
-
-///COPYRIGHT RAYENTALAI 2021
-
-app.get('/', (req, res) => res.send('how did you found this website'));
- 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
 client.on("ready", () => {
   console.log('code worked xd')
@@ -206,14 +196,6 @@ client.on('message', message => {
   message.channel.send(`${message.member.displayName}'s susrate is ${rating}%`);
  }
 });
-
-client.on("message", message => {
-  if (message.content.toLowerCase().startsWith('s!up up down down left right left right b a start')) {
-    var eastereggtwo = easteregg[Math.floor(Math.random() * easteregg.length)];
-    message.delete()
-    message.channel.send(`${eastereggtwo}`)
-  }
-})
 
 client.on("message", message => {
   if (message.content.toLowerCase().startsWith('susbot commands 2')) return;
