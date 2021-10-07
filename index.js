@@ -5,7 +5,7 @@ client.on("ready", () => {
   console.log('code worked xd')
 })
 
-client.login(process.env.TOKEN)///put token in brackets
+client.login("PUT TOKEN HERE")
 
 client.on('message', message => {
     if (message.content.toLowerCase().startsWith('susbot' + 'say')) {
